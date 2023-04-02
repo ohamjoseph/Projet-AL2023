@@ -37,7 +37,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'api',
+    'location_field.apps.DefaultConfig',
 ]
+
+LOCATION_FIELD = {
+    # 'provider.google.api': '//maps.google.com/maps/api/js?sensor=false',
+    # 'provider.google.api_key': '<PLACE YOUR API KEY HERE>',
+    # 'provider.google.api_libraries': '',
+    # 'provider.google.map.type': 'ROADMAP',
+    
+    'map.provider': 'openstreetmap',
+    'search.provider': 'nominatim',
+    
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
