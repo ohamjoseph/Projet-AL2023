@@ -1,0 +1,7 @@
+env_projet_all/
+*.sqlite3
+*.ipynb
+*.vscode
+*.json
+*__pycache__/
+*.http
