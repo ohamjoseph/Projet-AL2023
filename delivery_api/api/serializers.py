@@ -9,5 +9,7 @@ class PositionSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Position
-        fields = ['location','coli']
-        depth = 1
+        fields = '__all__'
+        # fields = ['location','coli']
+    
+        # depth = 1

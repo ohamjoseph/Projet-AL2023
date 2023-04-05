@@ -7,7 +7,7 @@ from api import tools
 
 class ListColis(APIView):
     def get(self, request):
-        numero = request.GET.get('numero',None)
+        numero = request.GET.get('q',None)
         if numero is not None:
             colis_data = requests.get(tools.coli_url,params={"numero": numero})
         else:
@@ -52,7 +52,7 @@ class ListColis(APIView):
     
 class ListPosition(APIView):
     def get(self, request):
-        numero = request.GET.get('numero',None)
+        numero = request.GET.get('q',None)
         if numero is not None:
             position_data = requests.get(tools.posotion_url,params={"coli": numero})
         else:
