@@ -19,7 +19,8 @@ class Position(models.Model):
     location = PlainLocationField(zoom=7)
     date = models.DateField(auto_now_add=True)
     heure = models.TimeField(auto_now_add=True)
-    coli = models.ForeignKey(Coli, on_delete=models.CASCADE, related_name="coli")
+    coli = models.ForeignKey(Coli, on_delete=models.SET_NULL,null=True, related_name="coli")
     
     def __str__(self):
         return self.coli.numeros_colis
+    
