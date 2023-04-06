@@ -38,7 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'location_field.apps.DefaultConfig',
 ]
+
+
+
+LOCATION_FIELD = {
+    'map.provider': 'openstreetmap',
+    'search.provider': 'nominatim',
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -118,6 +126,8 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = 'static/'
+
+LOCATION_FIELD_PATH = STATIC_URL + 'location_field'
 
 
 # Default primary key field type

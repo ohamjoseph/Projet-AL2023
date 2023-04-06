@@ -18,7 +18,7 @@
                         <div class="col-md-8 track-prod clrbg-before wow slideInUp">
                             <h2 class="title-1">Ajoutez un point de position</h2>
                             <div class="row">
-                            <form method="post">
+                            <form method="post" class="form-inline">
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="text" name="" id="" class="form-control box-shadow" placeholder="Entrez le numéro du produit" >
@@ -26,14 +26,15 @@
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="" id="" class="form-control box-shadow" placeholder="Entrez la latitude" value="">
+                                        <input type="text" name="" id="latitude_id" class="form-control box-shadow" placeholder="Entrez la latitude" value="" readonly>
                                     </div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group">
-                                        <input type="text" name="" id="" class="form-control box-shadow" placeholder="Entrez la longitude" value="">
+                                        <input type="text" name="" id="longitude_id" class="form-control box-shadow" placeholder="Entrez la longitude" value="" readonly>
                                     </div>
                                 </div>
+                                <div id="map"></div>
                                 <div class="col-md-12">
                                     <div class="form-group">
                                         <input type="submit" name="" id="" class="btn-1" value="send">
@@ -41,6 +42,9 @@
                                 </div>
                             </form>
                         </div>
+                    </div>
+
+                    
 
                         <div class="col-md-4 track-deco">
                             <div class="row">
@@ -57,4 +61,36 @@
             <!-- /.Track Product -->
         </article>
     </main>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+     integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+     crossorigin=""/>
+
+     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+     integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+     crossorigin=""></script>
+
+<script>
+    var map = L.map('map').setView([12.36793735135892, -1.5276145935058596], 13);
+    
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var popup = L.popup();
+
+    var marker = null;
+
+    map.on('click', function (e) {
+
+        document.getElementById("latitude_id").value = e.latlng.lat;
+        document.getElementById("longitude_id").value = e.latlng.lng;
+
+        if (marker !== null) {
+            map.removeLayer(marker);
+        }
+        marker = L.marker(e.latlng).addTo(map);
+    });
+</script>
 {% endblock %}
