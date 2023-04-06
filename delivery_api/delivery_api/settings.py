@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'api',
     'location_field.apps.DefaultConfig',
+
 ]
 
 LOCATION_FIELD = {
