@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
     'location_field.apps.DefaultConfig',
+    'sweetify',
 ]
 
 

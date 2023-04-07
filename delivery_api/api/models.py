@@ -6,7 +6,7 @@ from location_field.models.plain import PlainLocationField
 
 class Coli(models.Model):
     client = models.CharField(max_length= 30)
-    numeros_colis = models.CharField(max_length=30)
+    numeros_colis = models.CharField(max_length=30,unique=True)
 
     def __str__(self):
         return self.numeros_colis

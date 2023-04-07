@@ -18,7 +18,7 @@ class ColiViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = Coli.objects.all()
-        numero = self.request.GET.get('numero')
+        numero = self.request.GET.get('q',None)
         if numero is not None:
             queryset = queryset.filter(numeros_colis=numero)
         return queryset
@@ -31,7 +31,7 @@ class PositionViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         queryset = Position.objects.all()
-        coli = self.request.GET.get('coli')
+        coli = self.request.GET.get('q', None)
         if coli is not None:
             queryset = queryset.filter(coli__numeros_colis=coli)
         return queryset
