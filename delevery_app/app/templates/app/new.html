@@ -12,11 +12,12 @@
             <!-- /.Banner -->
 
             <!-- Track Product -->
+            {% url 'app:home' as home_url %}
             <section>
                 <div class="theme-container container">
                     <div class="row">
                         <div class="col-md-8 track-prod clrbg-before wow slideInUp">
-                            <h2 class="title-1">Ajoutez un point de position</h2>
+                            <h2 class="title-1">Ajoutez un point de position</h2> <span class="font2-light fs-12"><a href="{{ home_url }}">Voir les positions</a></span>
                             <div class="row">
                             <form method="post" class="form-inline" action={% url 'app:address' %}>
                                 {% csrf_token %}
