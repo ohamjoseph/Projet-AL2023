@@ -499,35 +499,35 @@ textarea:focus:-ms-input-placeholder {
 /**-- Color-1 Light --**/
 .theme-clr, .hvr-clr:hover, .hvr-clr:focus, a:focus, a:hover, .theme-menu > li:hover > a::after, .theme-menu > li.active > a,
 .list-items li.active a, .header-main .theme-menu .dropdown-menu > li > a:hover, .header-main  .theme-menu .dropdown-menu > li > a:focus {
-    color: #f5ab35;
+    color: #0511e7;
 }
 .small, .theme-clr-bg, .btn-1, .btn-round:hover, .btn-round:focus, .owl-nav div:hover, .owl-nav div:focus, .theme-menu > li > a::after,
 .header-style3 .menu-bar, .pagintn > li a:hover, .pagintn > li a:focus, .widget-wrap.tag-cloud a:hover, .widget-wrap.tag-cloud a:focus {
-    background-color: #f5ab35;
+    background-color: #0328e1;
 }
 .clrbg-before:before, .clrbg-after:after, .social-icons li a:hover, .social-icons li a:focus,
 .pricing-box.active .btn-round {
-    background-color: #f5ab35;
+    background-color: #0511e7;
 }
-.banner { border-bottom: 5px solid #f5ab35; }
+.banner { border-bottom: 5px solid #0328e1; }
 .form-control:focus, .themeclr-border, .social-icons li a:hover, .social-icons li a:focus,
 .btn-round:hover, .btn-round:focus, .pricing-box.active, .pricing-box.active .btn-round {
-    border-color: #f5ab35;
+    border-color: #0511e7;
 }
 
 /**-- Color-2 Dark --**/
 .theme-dark, .hvr-dark:hover, .hvr-dark:focus {
-    color: #df9826;
+    color: #0328e1;
 }
 .theme-dark-bg, .btn-1.dark {
-    background-color: #df9826;
+    background-color: #0328e1;
 }
 .darkclr-border, .owl-dot.active {
-    border-color: #df9826;
+    border-color: #0328e1;
 }
 .big {
-    box-shadow:0px 0px 10px #df9826, 0px 0px 20px #df9826, 0px 0px 30px #df9826, 0px 0px 50px #df9826, 0px 0px 60px #df9826 ;
-    background-color: #df9826;
+    box-shadow:0px 0px 10px #0328e1, 0px 0px 20px #0328e1, 0px 0px 30px #0328e1, 0px 0px 50px #0328e1, 0px 0px 60px #0328e1 ;
+    background-color: #0328e1;
 }
 /*------------------------1.6 Theme Colors Ends------------------------ */
 
@@ -535,7 +535,7 @@ textarea:focus:-ms-input-placeholder {
 
 .font-2, .font2-title1, .title-1, .title-2, .title-3, .btn-1, .btn-round, .theme-countdown {
     font-family: 'Poppins', sans-serif;
-    font-weight: 600;
+    font-weight: 900;
 }
 .section-title, .bg-text {
     font-family: 'Poppins', sans-serif;
@@ -543,7 +543,7 @@ textarea:focus:-ms-input-placeholder {
 }
 .font2-light {
     font-family: 'Poppins', sans-serif;
-    font-weight: 300;
+    font-weight: 600;
 }
 .italic-text {
     font-style: italic;
@@ -584,7 +584,7 @@ textarea:focus:-ms-input-placeholder {
 
 /*-------------------- Banner Starts -------------------- */
 .banner {
-    background-image: url(../img/banner.jpg);
+    background-image: url(../img/image3.jpg);
     background-size: cover;
     background-position: center center;
     text-align: center;
