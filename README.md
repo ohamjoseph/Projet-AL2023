@@ -4,7 +4,7 @@
 ~~~bash
 cd Projet-AL2023
 ~~~
-et installer les dépendances avec la commande :
+et créér un environement python et installer les dépendances avec la commande :
 
 ~~~bash
 > pip install -r requirements.txt
